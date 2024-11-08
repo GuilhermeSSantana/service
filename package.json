@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "studio": "yarn prisma studio",
+    "masterreset": "yarn prisma migrate reset --force && yarn migrate"
   },
   "keywords": [],
   "author": "",

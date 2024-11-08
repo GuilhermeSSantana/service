@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=barbershop
+      - POSTGRES_PASSWORD=barbershop
+      - POSTGRES_DB=barbershop
+    volumes:
+      - barbershop_pg_data:/bitnami/postgresql
+
+volumes:
+  barbershop_pg_data:
