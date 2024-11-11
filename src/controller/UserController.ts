@@ -19,14 +19,17 @@ export default class UserController {
   }
 
   async getUser(_: Request, res: Response) {
+    console.log("getUser");
     try {
       const response = await this._userService.getUser();
+      console.log(response);
 
       return res.status(200).json(responseSuccess("Success", response));
     } catch (error) {
       if (error instanceof ErrorInternal)
         throw new ErrorInternal(error.message);
       throw error;
+      console.log(error);
     }
   }
 }

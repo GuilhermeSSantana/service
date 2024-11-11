@@ -1,7 +1,8 @@
 import express from "express";
+import user from "./userRoutes";
 
-const routes = express();
+const server = express();
 
-routes.use("user");
+server.use("/user", user);
 
-export default routes;
+export default server;
